@@ -1,0 +1,81 @@
+@font-face {
+    font-family: OurFont;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'OurFont';  
+}
+.navBar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: azure;
+    height: 50px;
+}
+.navBar a{
+    text-decoration: none;
+    color: gray;
+    padding: 0 15px;
+    font-size: 25px;
+    line-height: 50px;
+}
+.navBar a:hover{
+    background-color: rgb(252, 252, 47);
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 25px;
+    padding:100px 200px;
+    background-color: ghostwhite;
+}
+.contactImg{
+    width: 100px;
+    height: 40%;
+    opacity: 0.5;
+}
+.text{
+    width: 70%;
+}
+h3{
+    margin: 15px;
+}
+.contSocMedia{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0 200px;
+    width: 100%;
+}
+.contSocMedia a{
+    text-decoration: none;
+    font-size: 35px;
+    color: gray;
+}
+.drustMreze{
+    width: 50px;
+    height: 50px;
+}
+.socM{
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#forma{
+    background-color: whitesmoke;
+    margin-top: 20px;
+    width: 100%;
+}
+#forma input{
+    justify-content: right;
+    margin: 5px;
+    width: 90%;
+    height: 40px;
+}
+#forma textarea{
+    margin: 5px;
+    width: 90%;
+    height: 120px;
+}

@@ -1,0 +1,36 @@
+@font-face {
+    font-family: OurFont;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'OurFont';  
+}
+.navBar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: azure;
+    height: 50px;
+}
+.navBar a{
+    text-decoration: none;
+    color: gray;
+    padding: 0 15px;
+    font-size: 25px;
+    line-height: 50px;
+}
+.navBar a:hover{
+    background-color: rgb(252, 252, 47);
+}
+.imageDiv{
+    display: flex;
+    height: 500px;
+    background-position: bottom;
+    background-image: url(../images/backgroundShoes.jpg);
+    color: white;
+    font-size:100px;
+    justify-content: center;
+    align-items: center;
+}
