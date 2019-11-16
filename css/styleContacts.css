@@ -5,7 +5,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'OurFont';
+    font-family: 'OurFont',Arial, Helvetica, sans-serif;
 }
 body{
     background-color: whitesmoke;
@@ -15,13 +15,13 @@ body{
     justify-content: flex-end;
     align-items: center;
     background-color: azure;
-    height: 50px;
+    max-height: 50px;
 }
 .navBar a{
     text-decoration: none;
     color: gray;
     padding: 0 15px;
-    font-size: 25px;
+    font-size: 1.75vw;
     line-height: 50px;
 }
 .navBar a:hover{
@@ -29,20 +29,19 @@ body{
 }
 .info{
     display: grid;
-    display: grid;
     grid-template-areas: 
     "a a b"
     "a a b"
     "c c c";
-    line-height: 25px;
-    padding:100px 250px;
+    line-height: 20px;
+    padding:7% 14%;
 }
-.info label{
+.info p{
     grid-area: a;
 }
 .contactImg{
     grid-area: b;
-    width: 125px;
+    max-width: 125px;
     opacity: 0.5;
 }
 h3{
@@ -51,45 +50,57 @@ h3{
 .contSocMedia{
     grid-area: c;
     margin-top: 0 200px;
-    width: 100%;
     text-align: center;
 }
 .contSocMedia a{
     text-decoration: none;
-    font-size: 30px;
+    font-size: 2.1vw;
     color: gray;
 }
 .contSocMedia ul{
     list-style-type: none;
     display: flex;
-    align-content: space-between;
-    width: 100%;
-    padding: 0 100px;
+    justify-content: center;
+    padding: 0 10%;
 }
 .contSocMedia ul li{
-    width: 300px;
+    max-width: 300px;
     display:flex;
     align-items:center;
 }
 .drustMreze{
-    width: 45px;
-    height: 45px;
+    max-width: 45px;
+    height: auto;
     margin: 15px;
 }
 .forma{
     display: grid;
-    grid-template-columns: 20% 80%;
-    padding: 0 30%;
-    font-size: 30px;
+    grid-template-columns: 1fr 4fr;
+    padding: 0 25%;
+    font-size:2vw;
 }
 .forma input{
     margin: 5px;
-    height: 40px;
+    max-height: 40px;
 }
 .forma textarea{
     margin: 5px;
-    height: 120px;
+    height: auto;
 }
 .forma label{
     align-self: center;
+}
+@media only screen and (max-width: 600px) {
+    .info{
+        padding: 7% 5%;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        grid-template-areas: 
+            "b"
+            "a"
+            "c";
+    }
+    .forma{
+        padding: 0 5%;
+    }
 }

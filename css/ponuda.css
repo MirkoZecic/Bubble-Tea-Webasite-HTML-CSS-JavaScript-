@@ -1,0 +1,97 @@
+@font-face {
+    font-family: defaultFont;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Metalia;
+    src: url(../fonts/Metalia.ttf)
+}
+
+@keyframes fading {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'defaultFont', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+    font-size: 3vw;
+    font-family: 'Metalia', Arial, Helvetica, sans-serif;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    max-height: 50px;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: gray;
+    padding: 0 15px;
+    font-size: 1.75vw;
+    line-height: 50px;
+}
+
+.navBar a:hover {
+    background-color: rgb(252, 252, 47);
+}
+
+.box {
+    border: 1px solid yellowgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 15%;
+    transition: transform 0.5s, background 0.5s, margin 0.5s, color 0.5s;
+    transition-timing-function: ease;
+}
+
+.box:hover {
+    transform: scale(1, 1.5);
+    background: #fff;
+    margin: 7% 15%;
+    color: red;
+    transition: transform 1s, background 1s, margin 1s, color 1s;
+}
+
+.boxFaded {
+    animation-name: fading;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.box p {
+    font-size: 1.2vw;
+    padding: 0 1%;
+}
+
+#box2 {
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+}
+.slick1{
+    width: 300px;
+    height: 200px;
+}
