@@ -2,29 +2,41 @@
     font-family: OurFont;
     src: url(../fonts/Roboto-Light.ttf);
 }
+@font-face {
+    font-family: Metalia;
+    src: url(../fonts/Metalia.ttf)
+}
 *{
     margin: 0;
     padding: 0;
     font-family: 'OurFont',Arial, Helvetica, sans-serif;
 }
+h1 {
+    text-align: center;
+    margin: 50px;
+    font-size: 3vw;
+    font-family: 'Metalia', Arial, Helvetica, sans-serif;
+}
 body{
     background-color: whitesmoke;
 }
-.navBar{
+.navBar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background-color: azure;
     max-height: 50px;
 }
-.navBar a{
+
+.navBar a {
     text-decoration: none;
     color: gray;
     padding: 0 15px;
     font-size: 1.75vw;
     line-height: 50px;
 }
-.navBar a:hover{
+
+.navBar a:hover {
     background-color: rgb(252, 252, 47);
 }
 .info{
@@ -49,7 +61,7 @@ h3{
 }
 .contSocMedia{
     grid-area: c;
-    margin-top: 0 200px;
+    margin-top: 15%;
     text-align: center;
 }
 .contSocMedia a{
@@ -73,18 +85,29 @@ h3{
     height: auto;
     margin: 15px;
 }
+.formAndMap{
+    display: flex;
+    justify-content: space-between;
+}
+#map{
+    width: 40%;
+    height: 400px;
+    background-color: grey;
+    padding: 0 5%;
+}
 .forma{
+    width: 40%;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    padding: 0 25%;
+    padding: 0 5%;
     font-size:2vw;
 }
 .forma input{
-    margin: 5px;
+    margin: 5px 0;
     max-height: 40px;
 }
 .forma textarea{
-    margin: 5px;
+    margin: 5px 0;
     height: auto;
 }
 .forma label{
@@ -100,7 +123,15 @@ h3{
             "a"
             "c";
     }
+    .formAndMap{
+        flex-direction: column;
+    }
+    #map{
+        width: 80%;
+        margin: 0 auto;
+    }
     .forma{
-        padding: 0 5%;
+        width: 80%;
+        margin: 0 auto;
     }
 }

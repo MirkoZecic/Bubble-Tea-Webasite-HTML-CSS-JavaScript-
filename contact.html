@@ -10,26 +10,32 @@
 </head>
 
 <body>
+    <h1>Kontakt</h1>
     <div class="navBar">
         <a href="index.html">Pocetna</a>
         <a href="#">O nama</a>
         <a href="ponuda.html">Ponuda</a>
         <a href="contact.html">Kontakt</a>
     </div>
-    <h3 style="text-align:center; font-size: 2vw;">Ukoliko imate nekih nedoumica slobodno nam se obratite</h3>
-    <form class="forma">
-        <label for="firstName">Ime:</label>
-        <input type="text" name="name" id="name" placeholder="Unesite Vase ime">
+    <h3 style="text-align: center; font-size: 2vw; margin: 5% auto;">Ukoliko imate nekih nedoumica slobodno nam se obratite</h3>
+    <div class="formAndMap">
+        <form class="forma">
+            <label for="firstName">Ime:</label>
+            <input type="text" name="name" id="name" placeholder="Unesite Vase ime">
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Unesite Vasu email adresu">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Unesite Vasu email adresu">
 
-        <label for="subject">Tema:</label>
-        <input type="text" name="subject" id="subject" placeholder="Unesite naslov">
+            <label for="subject">Tema:</label>
+            <input type="text" name="subject" id="subject" placeholder="Unesite naslov">
 
-        <label for="description">Opis:</label>
-        <textarea name="description" id="desc" cols="30" rows="10" placeholder="Unesite poruku"></textarea><br>
-    </form>
+            <label for="description">Opis:</label>
+            <textarea name="description" id="desc" cols="30" rows="10" placeholder="Unesite poruku"></textarea><br>
+        </form>
+
+        <div id="map">
+        </div>
+    </div>
     <div class="info">
         <p>Fabrika obuće SOLO iza sebe ima 22 godina iskustva u oblasti dizajna i proizvodnje
             obuće od prirodne kože.
@@ -68,6 +74,11 @@
             </ul>
         </div>
     </div>
+
+    <script src="javascript/contact.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8o0CHLX5ztbVvfk1oIfbb7abvmFAt9h4&callback=initMap">
+        </script>
 </body>
 
 </html>
