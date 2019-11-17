@@ -19,7 +19,7 @@
     </div>
     <h3 style="text-align: center; font-size: 2vw; margin: 5% auto;">Ukoliko imate nekih nedoumica slobodno nam se obratite</h3>
     <div class="formAndMap">
-        <form class="forma">
+        <form class="forma" onsubmit="return validateForm();return false;">
             <label for="firstName">Ime:</label>
             <input type="text" name="name" id="name" placeholder="Unesite Vase ime">
 
@@ -30,7 +30,10 @@
             <input type="text" name="subject" id="subject" placeholder="Unesite naslov">
 
             <label for="description">Opis:</label>
-            <textarea name="description" id="desc" cols="30" rows="10" placeholder="Unesite poruku"></textarea><br>
+            <textarea name="description" id="desc" cols="30" rows="10" placeholder="Unesite poruku"></textarea>
+
+            <button type="reset" class="reset">Reset</button>
+            <button type="submit" class="submit">Submit</button>
         </form>
 
         <div id="map">
@@ -77,7 +80,7 @@
 
     <script src="javascript/contact.js"></script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8o0CHLX5ztbVvfk1oIfbb7abvmFAt9h4&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDueLxpzMdbkvyOAJnl5JRsS-ZoTjRiy4o&callback=initMap">
         </script>
 </body>
 
