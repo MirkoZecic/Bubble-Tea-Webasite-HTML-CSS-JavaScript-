@@ -1,25 +1,25 @@
 @font-face {
-    font-family: OurFont;
+    font-family: defaultFont;
     src: url(../fonts/Roboto-Light.ttf);
 }
-@font-face {
-    font-family: Metalia;
-    src: url(../fonts/Metalia.ttf)
-}
-*{
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'OurFont',Arial, Helvetica, sans-serif;
+    font-family: 'defaultFont', Arial, Helvetica, sans-serif;
 }
-h1 {
-    text-align: center;
-    margin: 50px;
-    font-size: 3vw;
-    font-family: 'Metalia', Arial, Helvetica, sans-serif;
+
+.logo {
+    width: 180px;
+    height: 150px;
+    display: block;
+    margin: 1% auto;
 }
-body{
+
+body {
     background-color: whitesmoke;
 }
+
 .navBar {
     display: flex;
     justify-content: center;
@@ -39,96 +39,94 @@ body{
 .navBar a:hover {
     background-color: rgb(252, 252, 47);
 }
-.info{
-    display: grid;
-    grid-template-areas: 
-    "a a b"
-    "a a b"
-    "c c c";
-    line-height: 20px;
-    padding:7% 14%;
-}
-.info p{
-    grid-area: a;
-}
-.contactImg{
-    grid-area: b;
-    max-width: 125px;
-    opacity: 0.5;
-}
-h3{
-    margin: 15px;
-}
-.contSocMedia{
-    grid-area: c;
-    margin-top: 15%;
-    text-align: center;
-}
-.contSocMedia a{
-    text-decoration: none;
-    font-size: 2.1vw;
+
+.dropbtn {
     color: gray;
+    background-color: azure;
+    padding: 0 15px;
+    font-size: 25px;
+    line-height: 50px;
+    border: none;
 }
-.contSocMedia ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    padding: 0 10%;
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 7.6%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
-.contSocMedia ul li{
-    max-width: 300px;
-    display:flex;
-    align-items:center;
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+    line-height: 25px;
 }
-.drustMreze{
-    max-width: 45px;
-    height: auto;
-    margin: 15px;
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
-.formAndMap{
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(252, 252, 47);
+    cursor: pointer;
+}
+
+.formAndMap {
     display: flex;
     justify-content: space-between;
 }
-#map{
+
+#map {
     width: 40%;
     height: 400px;
     background-color: grey;
     padding: 0 5%;
 }
-.forma{
+
+.forma {
     width: 40%;
     display: flex;
     flex-wrap: wrap;
     padding: 0 5%;
-    font-size:2vw;
+    font-size: 2vw;
     justify-content: space-around;
 }
-.forma input{
+
+.forma input {
     width: 70%;
     margin: 5px auto;
     padding: 12px 10px;
     max-height: 40px;
 }
-.forma input:focus{
+
+.forma input:focus {
     border: 3px solid #555;
 }
-.forma textarea{
+
+.forma textarea {
     width: 70%;
     margin: 5px auto;
     padding: 12px 10px;
     resize: none;
 }
-.forma textarea:focus{
-    border: 3px solid #555;
 
+.forma textarea:focus {
+    border: 3px solid #555;
 }
-.forma label{
+
+.forma label {
     width: 20%;
     align-self: center;
     font-size: 25px;
 }
-button{
-    color: #494949 ;
+
+.submit {
+    color: rgb(74, 172, 9);
     text-transform: uppercase;
     background: #ffffff;
     border-radius: 6px;
@@ -138,47 +136,82 @@ button{
     border: 4px solid #494949;
     transition: all 0.4s;
 }
-.submit{
-    color: rgb(74, 172, 9);
-}
+
 .submit:hover {
     color: #ffffff;
     background: rgb(74, 172, 9);
     border-color: rgb(74, 172, 9);
     transition: all 0.4s;
 }
-.reset{
+
+.reset {
     color: rgb(177, 2, 37);
+    text-transform: uppercase;
+    background: #ffffff;
+    border-radius: 6px;
+    margin: 10px 0;
+    width: 20%;
+    height: 50px;
+    border: 4px solid #494949;
+    transition: all 0.4s;
 }
-.reset:hover{
+
+.reset:hover {
     color: #ffffff;
     background: rgb(177, 2, 37);
-    border-color:rgb(177, 2, 37);
-    transition: all 0.4s ease 0s;
+    border-color: rgb(177, 2, 37);
+    transition: all 0.4s;
 }
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 5% auto;
+}
+
+.drustMreze {
+    max-width: 45px;
+    height: auto;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+    justify-content: space-evenly;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, blue, red, green);
+}
+
 @media only screen and (max-width: 600px) {
-    .info{
+    .info {
         padding: 7% 2%;
         justify-items: center;
     }
-    .formAndMap{
+    .formAndMap {
         flex-direction: column;
     }
-    #map{
+    #map {
         width: 80%;
         margin: 0 auto;
     }
-    .forma{
+    .forma {
         width: 90%;
-        margin: 0 auto;;
+        margin: 0 auto;
+        ;
     }
-    .forma input{
+    .forma input {
         width: 100%;
     }
-    .forma textarea{
+    .forma textarea {
         width: 100%;
     }
-    .forma label{
+    .forma label {
         width: 100%;
         align-self: left;
     }

@@ -1,9 +1,11 @@
 function initMap() {
-    var location = { lat: 44.804360, lng: 20.474730 };
+    var location1 = { lat: 44.804360, lng: 20.474730 };
+    var location2 = { lat: 44.815965, lng: 20.455616 };
 
-    var map = new google.maps.Map(document.getElementById("map"), { zoom: 14, center: location });
+    var map = new google.maps.Map(document.getElementById("map"), { zoom: 14, center: { lat: (location1.lat + location2.lat) / 2, lng: (location1.lng + location2.lng) / 2 } });
 
-    var marker = new google.maps.Marker({ position: location, map: map });
+    var marker1 = new google.maps.Marker({ position: location1, map: map });
+    var marker2 = new google.maps.Marker({ position: location2, map: map });
 }
 
 function validateEmail(email) {
@@ -51,7 +53,7 @@ function validateForm() {
         return false;
     }
 
-    alert("Poruka uspesno poslata:\n Ime: " + name + "\nE-mail: " + email + "\nTema: " + subject + "\nPoruka: " + message);
+    alert("Poruka uspesno poslata:\n\nIme: " + name.value + "\nE-mail: " + email.value + "\nTema: " + subject.value + "\nPoruka: " + desc.value);
 
     return true;
 }

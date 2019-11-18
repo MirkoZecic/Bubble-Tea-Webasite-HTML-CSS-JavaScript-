@@ -10,16 +10,24 @@
 </head>
 
 <body>
-    <h1>Kontakt</h1>
+    <img src="images/logo.png" alt="Logo" class="logo">
     <div class="navBar">
         <a href="index.html">Pocetna</a>
-        <a href="#">O nama</a>
-        <a href="ponuda.html">Ponuda</a>
+        <a href="oNama.html" style="background-color: rgb(252, 252, 47);">O nama</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="location.href='ponuda.html'">Ponuda</button>
+            <div class="dropdown-content">
+                <a href="ponuda.html#box1">Vocni sok</a>
+                <a href="ponuda.html#box2">Mlecni sok</a>
+                <a href="ponuda.html#box3">Kafa</a>
+            </div>
+        </div>
         <a href="contact.html">Kontakt</a>
     </div>
-    <h3 style="text-align: center; font-size: 25px; margin: 5% auto;">Ukoliko imate nekih nedoumica slobodno nam se obratite</h3>
+
+    <h3>Ukoliko imate nekih nedoumica slobodno nam se obratite</h3>
     <div class="formAndMap">
-        <form class="forma" onsubmit="return validateForm();return false;">
+        <form class="forma" onsubmit="return validateForm()">
             <label for="firstName">Ime:</label>
             <input type="text" name="name" id="name" placeholder="Unesite Vase ime">
 
@@ -32,52 +40,37 @@
             <label for="description">Opis:</label>
             <textarea name="description" id="desc" cols="30" rows="10" placeholder="Unesite poruku"></textarea>
 
-            <button type="reset" class="reset">Reset</button>
-            <button type="submit" class="submit">Submit</button>
+            <button type="reset" class="reset">Resetuj</button>
+            <button type="submit" class="submit">Pošalji</button>
         </form>
 
         <div id="map">
         </div>
     </div>
-    <div class="info">
-        <p>Fabrika obuće SOLO iza sebe ima 22 godina iskustva u oblasti dizajna i proizvodnje
-            obuće od prirodne kože.
-            Iz sezone u sezonu, koristeći jedinstvena svojstva novih materijala i tehnoloških procesa, kontinuirano
-            ispunjavamo
-            očekivanja svojih potrošača predstavljajući zanimljiv spoj novih trendova, praktičnosti, znatskog umeća i
-            pristupačnosti u ceni. Dobitnici smo tri srebrne i dve zlatne košute na međunarodnim sajmovima kože i obuće
-            u Beogradu.</p>
-        <img src="images/contactIncon.png" alt="contact" class="contactImg">
 
-        <div class="contSocMedia">
-            <h3> Mozete nas pronaci i na drustvenim medijima</h3>
-            <ul>
-                <li>
-                    <a href="mailto:office@solo.rs">
-                        <img src="images/mail.png" alt="Email" class="drustMreze">
-                    </a>
-                    <a href="mailto:office@solo.rs"> Email </a>
+    <hr>
+    <footer>
+        <h3> Možete nas pronaći i na društvenim medijima</h3>
+        <ul>
+            <li>
+                <a href="mailto:office@solo.rs">
+                    <img src="images/mail.png" alt="Email" class="drustMreze">
+                </a>
+            </li>
 
-                </li>
+            <li>
+                <a href="https://www.facebook.com/obucasolo/?ref=bookmarks" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook" class="drustMreze">
+                </a>
+            </li>
 
-                <li>
-                    <a href="https://www.facebook.com/obucasolo/?ref=bookmarks" target="_blank">
-                        <img src="images/facebook.png" alt="Facebook" class="drustMreze">
-                    </a>
-                    <a href="https://www.facebook.com/obucasolo/?ref=bookmarks" target="_blank">
-                        obucasolo</a>
-                </li>
-
-                <li>
-                    <a href="https://www.instagram.com/obuca_solo/" target="_blank">
-                        <img src="images/instagram.png" alt="Instagram" class="drustMreze"> </a>
-                    <a href="https://www.instagram.com/obuca_solo/" target="_blank">
-                        @obucasolo</a>
-                </li>
-            </ul>
+            <li>
+                <a href="https://www.instagram.com/obuca_solo/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" class="drustMreze"> </a>
+            </li>
+        </ul>
         </div>
-    </div>
-
+    </footer>
     <script src="javascript/contact.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDueLxpzMdbkvyOAJnl5JRsS-ZoTjRiy4o&callback=initMap">

@@ -3,17 +3,7 @@
     src: url(../fonts/Roboto-Light.ttf);
 }
 
-@keyframes fading {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.3;
-    }
-}
-
 * {
-    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     font-family: 'defaultFont', Arial, Helvetica, sans-serif;
@@ -48,6 +38,45 @@ body {
 
 .navBar a:hover {
     background-color: rgb(252, 252, 47);
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 5% auto;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    font-size: large;
+    padding: 7% 14%;
+}
+
+.contactImg {
+    align-items: flex-start;
+    max-width: 125px;
+    max-height: 150px;
+    opacity: 0.7;
+}
+
+.drustMreze {
+    max-width: 45px;
+    height: auto;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+    justify-content: space-evenly;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, blue, red, green);
 }
 
 .dropbtn {
@@ -86,74 +115,18 @@ body {
     cursor: pointer;
 }
 
-.box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2% 15%;
-    border: 1px solid yellowgreen;
-    border-radius: 6px;
-    transition: all 0.5s;
-}
-
-.box p {
-    font-size: 20px;
-    padding: 0 1%;
-}
-
-#box2 {
-    flex-direction: row-reverse;
-}
-
-.box:hover {
-    box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
-    transform: scale(1, 1.2);
-    background: #fff;
-    margin: 7% 15%;
-    color: rgb(0, 195, 255);
-    transition: all 1s;
-}
-
-.boxFaded {
-    animation-name: fading;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.slick {
-    width: 26%;
-}
-
-h3 {
-    text-align: center;
-    font-size: 25px;
-    margin: 5% auto;
-}
-
-.drustMreze {
-    max-width: 45px;
-    height: auto;
-}
-
-footer ul {
-    list-style-type: none;
-    display: flex;
-    width: 50%;
-    margin: 20px auto;
-    justify-content: space-evenly;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, blue, red, green);
-}
-
 @media only screen and (max-width: 600px) {
-    .box {
-        margin: 2% 2%;
+    .info {
+        padding: 7% 2%;
+        justify-items: center;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
     }
-    .box:hover {
-        margin: 7% 2%;
+    .info p {
+        order: 1;
+    }
+    .info img {
+        order: 0;
+        height: 80%;
     }
 }

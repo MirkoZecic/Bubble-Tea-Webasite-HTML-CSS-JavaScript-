@@ -14,14 +14,21 @@
 </head>
 
 <body>
-    <h1>Ponuda</h1>
+    <img src="images/logo.png" alt="Logo" class="logo">
     <div class="navBar">
         <a href="index.html">Pocetna</a>
-        <a href="#">O nama</a>
-        <a href="ponuda.html">Ponuda</a>
+        <a href="oNama.html" style="background-color: rgb(252, 252, 47);">O nama</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="location.href='ponuda.html'">Ponuda</button>
+            <div class="dropdown-content">
+                <a href="ponuda.html#box1">Vocni sok</a>
+                <a href="ponuda.html#box2">Mlecni sok</a>
+                <a href="ponuda.html#box3">Kafa</a>
+            </div>
+        </div>
         <a href="contact.html">Kontakt</a>
     </div>
-
+    
     <div class="box" id="box1">
         <p id="text1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, quia. Suscipit corporis illum vero
             laborum
@@ -34,6 +41,7 @@
             <img src="images/slick1c.jpg" alt="fruit2">
         </div>
     </div>
+
     <div class="box" id="box2">
         <p id="text2">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quas non nostrum, vitae repellat omnis, esse
@@ -46,6 +54,7 @@
             <img src="images/slick2c.jpg" alt="fruit2">
         </div>
     </div>
+
     <div class="box" id="box3">
         <p id="text3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, architecto ullam delectus voluptate
@@ -59,6 +68,30 @@
             <img src="images/3.jpg" alt="fruit2">
         </div>
     </div>
+
+    <hr>
+    <footer>
+        <h3> Možete nas pronaći i na društvenim medijima</h3>
+        <ul>
+            <li>
+                <a href="mailto:office@solo.rs">
+                    <img src="images/mail.png" alt="Email" class="drustMreze">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.facebook.com/obucasolo/?ref=bookmarks" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook" class="drustMreze">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/obuca_solo/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" class="drustMreze"> </a>
+            </li>
+        </ul>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="slick/slick.js"></script>
