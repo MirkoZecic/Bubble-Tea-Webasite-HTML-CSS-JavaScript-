@@ -105,8 +105,27 @@ h3{
 }
 .forma input{
     width: 70%;
-    margin: 5px 0;
+    margin: 5px auto;
+    padding: 12px 10px;
     max-height: 40px;
+}
+.forma input:focus{
+    border: 3px solid #555;
+}
+.forma textarea{
+    width: 70%;
+    margin: 5px auto;
+    padding: 12px 10px;
+    resize: none;
+}
+.forma textarea:focus{
+    border: 3px solid #555;
+
+}
+.forma label{
+    width: 20%;
+    align-self: center;
+    font-size: 25px;
 }
 button{
     color: #494949 ;
@@ -137,15 +156,6 @@ button{
     border-color:rgb(177, 2, 37);
     transition: all 0.4s ease 0s;
 }
-.forma textarea{
-    width: 70%;
-    margin: 5px 0;
-    height: auto;
-}
-.forma label{
-    width: 20%;
-    align-self: center;
-}
 @media only screen and (max-width: 600px) {
     .info{
         padding: 7% 2%;
@@ -159,7 +169,17 @@ button{
         margin: 0 auto;
     }
     .forma{
-        width: 80%;
-        margin: 0 auto;
+        width: 90%;
+        margin: 0 auto;;
+    }
+    .forma input{
+        width: 100%;
+    }
+    .forma textarea{
+        width: 100%;
+    }
+    .forma label{
+        width: 100%;
+        align-self: left;
     }
 }

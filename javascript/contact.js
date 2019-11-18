@@ -21,33 +21,33 @@ function validateInputBox(message) {
 
 function validateForm() {
 
-    let name = document.querySelector("#name").value;
-    let email = document.querySelector("#email").value;
-    let subject = document.querySelector("#subject").value;
-    let desc = document.querySelector("#desc").value;
+    let name = document.querySelector("#name");
+    let email = document.querySelector("#email");
+    let subject = document.querySelector("#subject");
+    let desc = document.querySelector("#desc");
 
-    if (!validateInputBox(name)) {
+    if (!validateInputBox(name.value)) {
         alert("Niste uneli ime!");
-
+        name.focus();
         return false;
     }
 
 
-    if (!validateEmail(email)) {
+    if (!validateEmail(email.value)) {
         alert("Pogresan format e-maila!");
-
+        email.focus();
         return false;
     }
 
-    if (!validateInputBox(subject)) {
+    if (!validateInputBox(subject.value)) {
         alert("Niste uneli naziv teme!");
-
+        subject.focus();
         return false;
     }
 
-    if (!validateInputBox(desc)) {
+    if (!validateInputBox(desc.value)) {
         alert("Niste uneli poruku!");
-
+        desc.focus();
         return false;
     }
 

@@ -55,19 +55,21 @@ h1 {
 }
 
 .box {
-    border: 1px solid yellowgreen;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 2% 15%;
+    border: 1px solid yellowgreen;
+    border-radius: 6px;
     transition: all 0.5s;
 }
 
 .box:hover {
-    transform: scale(1, 1.25);
+    box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
+    transform: scale(1, 1.2);
     background: #fff;
     margin: 7% 15%;
-    color: red;
+    color: rgb(0, 195, 255);
     transition: all 1s;
 }
 
@@ -88,7 +90,6 @@ h1 {
 
 .slick {
     width: 26%;
-    max-height: 100%;
 }
 
 @media only screen and (max-width: 600px) {
