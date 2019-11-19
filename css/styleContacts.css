@@ -17,20 +17,20 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .navBar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: azure;
+    background-color: rgb(41, 40, 40);
     max-height: 50px;
 }
 
 .navBar a {
     text-decoration: none;
-    color: gray;
+    color: red;
     padding: 0 15px;
     font-size: 25px;
     line-height: 50px;
@@ -41,8 +41,8 @@ body {
 }
 
 .dropbtn {
-    color: gray;
-    background-color: azure;
+    color: red;
+    background-color: rgb(41, 40, 40);
     padding: 0 15px;
     font-size: 25px;
     line-height: 50px;
