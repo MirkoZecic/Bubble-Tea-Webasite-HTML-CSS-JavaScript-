@@ -8,6 +8,20 @@ function initMap() {
     var marker2 = new google.maps.Marker({ position: location2, map: map });
 }
 
+function showPhone() {
+    document.querySelector("#emailText").style.display = "none";
+    document.querySelector("#email").style.display = "none";
+    document.querySelector("#phoneText").style.display = "block";
+    document.querySelector("#phone").style.display = "block";
+}
+
+function showEmail() {
+    document.querySelector("#emailText").style.display = "block";
+    document.querySelector("#email").style.display = "block";
+    document.querySelector("#phoneText").style.display = "none";
+    document.querySelector("#phone").style.display = "none";
+}
+
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
@@ -21,12 +35,26 @@ function validateInputBox(message) {
     return true;
 }
 
+function validatePhoneNumber(number) {
+    var isNum = /^\d+$/.test(number);
+    if (number.length < 10)
+        return false;
+    if (number.length > 10)
+        return false;
+    if (number.slice(0, 2) !== "06")
+        return false;
+    return isNum;
+}
+
 function validateForm() {
 
     let name = document.querySelector("#name");
     let email = document.querySelector("#email");
-    let subject = document.querySelector("#subject");
-    let desc = document.querySelector("#desc");
+    let phone = document.querySelector("#phone")
+    let emailRadio = document.querySelector("#e-mailResponse");
+    let phoneRadio = document.querySelector("#phoneResponse")
+    let msg = document.querySelector("#msg");
+    let responseAlert = "email";
 
     if (!validateInputBox(name.value)) {
         alert("Niste uneli ime!");
@@ -34,26 +62,39 @@ function validateForm() {
         return false;
     }
 
+    if (emailRadio.checked) {
+        if (!validateEmail(email.value)) {
+            alert("Pogresan format e-maila!");
+            email.focus();
+            return false;
+        }
+    }
 
-    if (!validateEmail(email.value)) {
-        alert("Pogresan format e-maila!");
-        email.focus();
+    else if (phoneRadio.checked) {
+        if (!validatePhoneNumber(phone.value)) {
+            alert("Neispravan broj!");
+            phone.focus();
+            return false;
+        }
+        responseAlert = "phone";
+    }
+
+    else {
+        alert("Morate zokruziti kako da vam odgovorimo!");
         return false;
     }
 
-    if (!validateInputBox(subject.value)) {
-        alert("Niste uneli naziv teme!");
-        subject.focus();
-        return false;
-    }
 
-    if (!validateInputBox(desc.value)) {
+    if (!validateInputBox(msg.value)) {
         alert("Niste uneli poruku!");
-        desc.focus();
+        msg.focus();
         return false;
     }
 
-    alert("Poruka uspesno poslata:\n\nIme: " + name.value + "\nE-mail: " + email.value + "\nTema: " + subject.value + "\nPoruka: " + desc.value);
+    if (responseAlert == "email")
+        alert("Poruka uspesno poslata\n\nIme: " + name.value + "\nE-mail: " + email.value + "\nPoruka:" + msg.value);
+    else
+        alert("Poruka uspesno poslata\n\nIme: " + name.value + "\nTelefon: " + phone.value + "\nPoruka:" + msg.value);
 
     return true;
 }

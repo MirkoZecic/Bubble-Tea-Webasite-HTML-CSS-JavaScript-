@@ -97,9 +97,19 @@ body {
     justify-content: space-around;
 }
 
+.radDiv {
+    width: 70%;
+    display: grid;
+    margin: 5px 0;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    justify-items: center;
+    align-content: center;
+}
+
 .forma input {
     width: 70%;
-    margin: 5px auto;
+    margin: 5px 0;
     padding: 12px 10px;
     max-height: 40px;
 }
@@ -110,7 +120,7 @@ body {
 
 .forma textarea {
     width: 70%;
-    margin: 5px auto;
+    margin: 5px 0;
     padding: 12px 10px;
     resize: none;
 }
@@ -121,8 +131,13 @@ body {
 
 .forma label {
     width: 20%;
+    margin: 0 auto 0 0;
     align-self: center;
-    font-size: 25px;
+    font-size: 1.6vw;
+}
+
+#email, #emailText, #phone, #phoneText {
+    display: none;
 }
 
 .submit {
@@ -185,6 +200,7 @@ footer ul {
 hr {
     border: 0;
     height: 1px;
+    margin-top: 5%;
     background-image: linear-gradient(to right, blue, red, green);
 }
 
@@ -213,6 +229,7 @@ hr {
     }
     .forma label {
         width: 100%;
+        font-size: 25px;
         align-self: left;
     }
 }

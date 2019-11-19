@@ -12,13 +12,13 @@
 <body>
     <img src="images/logo.png" alt="Logo" class="logo">
     <div class="navBar">
-        <a href="index.html">Pocetna</a>
+        <a href="index.html">Početna</a>
         <a href="oNama.html">O nama</a>
         <div class="dropdown">
             <button class="dropbtn" onclick="location.href='ponuda.html'">Ponuda</button>
             <div class="dropdown-content">
-                <a href="ponuda.html#box1">Vocni sok</a>
-                <a href="ponuda.html#box2">Mlecni sok</a>
+                <a href="ponuda.html#box1">Voćni sok</a>
+                <a href="ponuda.html#box2">Mlečni sok</a>
                 <a href="ponuda.html#box3">Kafa</a>
             </div>
         </div>
@@ -29,16 +29,24 @@
     <div class="formAndMap">
         <form class="forma" onsubmit="return validateForm()">
             <label for="firstName">Ime:</label>
-            <input type="text" name="name" id="name" placeholder="Unesite Vase ime">
+            <input type="text" name="name" id="name" placeholder="Unesite Vaše ime">
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Unesite Vasu email adresu">
+            <label for="s">Kako da vam odgovorimo:</label>
+            <div class="radDiv">
+                <p>Telefonom</p>
+                <p>E-mailom</p>
+                <input type="radio" name="response" value="phoneR" id="phoneResponse" onclick="showPhone();">
+                <input type="radio" name="response" value="e-mailR" id="e-mailResponse" onclick="showEmail()">
+            </div>
 
-            <label for="subject">Tema:</label>
-            <input type="text" name="subject" id="subject" placeholder="Unesite naslov">
+            <label for="email" id="emailText">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Unesite Vašu email adresu">
+
+            <label for="phone" id="phoneText">Telefon:</label>
+            <input type="text" name="phone" id="phone" placeholder="Unesite Vaš broj telefona">
 
             <label for="description">Opis:</label>
-            <textarea name="description" id="desc" cols="30" rows="10" placeholder="Unesite poruku"></textarea>
+            <textarea name="description" id="msg" cols="30" rows="10" placeholder="Unesite poruku"></textarea>
 
             <button type="reset" class="reset">Resetuj</button>
             <button type="submit" class="submit">Pošalji</button>
@@ -53,19 +61,19 @@
         <h3> Možete nas pronaći i na društvenim medijima</h3>
         <ul>
             <li>
-                <a href="mailto:office@solo.rs">
+                <a href="mailto:bubbleTea@gmail.com">
                     <img src="images/mail.png" alt="Email" class="drustMreze">
                 </a>
             </li>
 
             <li>
-                <a href="https://www.facebook.com/obucasolo/?ref=bookmarks" target="_blank">
+                <a href="https://www.facebook.com/BubbleTeaBoom/" target="_blank">
                     <img src="images/facebook.png" alt="Facebook" class="drustMreze">
                 </a>
             </li>
 
             <li>
-                <a href="https://www.instagram.com/obuca_solo/" target="_blank">
+                <a href="https://www.instagram.com/bubbleteaboom/" target="_blank">
                     <img src="images/instagram.png" alt="Instagram" class="drustMreze"> </a>
             </li>
         </ul>
