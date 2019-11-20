@@ -22,7 +22,7 @@ body {
 
 .navBar {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: rgb(41, 40, 40);
     max-height: 50px;
@@ -213,28 +213,32 @@ hr {
         flex-direction: column;
     }
     #map {
-        width: 80%;
-        margin: 0 auto;
+        width: 96%;
+        margin: 0 2%;
+        padding: 0;
     }
     .forma {
-        width: 90%;
-        margin: 0 auto;
+        width: 95%;
+        padding: 0 2%;
     }
     .forma input {
-        width: 100%;
+        width: 97%;
+        margin: 0 2%;
     }
     .forma textarea {
-        width: 100%;
+        width: 97%;
+        margin: 0 1%;
     }
     .forma label {
-        width: 100%;
+        width: 97%;
+        margin: 0 1%;
         font-size: 25px;
         align-self: left;
     }
     .navBar a {
-        font-size: 20px;
+        font-size: 10.8pt;
     }
     .dropbtn {
-        font-size: 21px;
+        font-size: 10.8pt;
     }
 }
