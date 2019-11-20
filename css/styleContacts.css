@@ -219,7 +219,6 @@ hr {
     .forma {
         width: 90%;
         margin: 0 auto;
-        ;
     }
     .forma input {
         width: 100%;
@@ -231,5 +230,11 @@ hr {
         width: 100%;
         font-size: 25px;
         align-self: left;
+    }
+    .navBar a {
+        font-size: 20px;
+    }
+    .dropbtn {
+        font-size: 21px;
     }
 }

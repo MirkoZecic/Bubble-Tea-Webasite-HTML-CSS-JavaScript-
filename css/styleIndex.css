@@ -93,8 +93,8 @@ h3 {
 }
 
 .picDiv p {
-    position: absolute;
-    top: 65%;
+    position: relative;
+    top: 50%;
     width: 100%;
     text-align: center;
     color: rgb(0, 0, 0);
@@ -120,4 +120,13 @@ hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, blue, red, green);
+}
+
+@media only screen and (max-width: 600px) {
+    .navBar a {
+        font-size: 20px;
+    }
+    .dropbtn {
+        font-size: 21px;
+    }
 }

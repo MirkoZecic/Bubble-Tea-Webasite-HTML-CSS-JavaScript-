@@ -127,6 +127,13 @@ hr {
     }
     .info img {
         order: 0;
+        margin: 10% 0;
         height: 80%;
+    }
+    .navBar a {
+        font-size: 20px;
+    }
+    .dropbtn {
+        font-size: 21px;
     }
 }
