@@ -1,3 +1,14 @@
+var navbar = document.querySelector('.navBar');
+var sticky = navbar.offsetTop;
+
+window.onscroll = function () {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+};
+
 function initMap() {
     var location1 = { lat: 44.804360, lng: 20.474730 };
     var location2 = { lat: 44.815965, lng: 20.455616 };

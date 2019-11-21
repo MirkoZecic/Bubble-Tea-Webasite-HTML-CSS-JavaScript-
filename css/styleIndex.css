@@ -76,6 +76,12 @@ body {
     cursor: pointer;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 h3 {
     text-align: center;
     font-size: 25px;

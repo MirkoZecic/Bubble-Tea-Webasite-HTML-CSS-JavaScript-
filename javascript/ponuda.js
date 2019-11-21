@@ -55,7 +55,6 @@ $('#box2').hover(function () {
     document.getElementById('text2').innerHTML = "Ovde stoji text kad se pomeri mis sa diva (drugi)";
 });
 
-
 $('#box3').hover(function () {
     $(this).siblings().addClass('boxFaded');
     $('#slick3').slick('slickPlay');
@@ -63,3 +62,15 @@ $('#box3').hover(function () {
     $(this).siblings().removeClass('boxFaded');
     $('#slick3').slick('slickPause');
 });
+
+
+var navbar = document.querySelector('.navBar');
+var sticky = navbar.offsetTop;
+
+window.onscroll = function () {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+};
