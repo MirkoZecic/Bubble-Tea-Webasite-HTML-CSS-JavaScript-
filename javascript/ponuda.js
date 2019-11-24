@@ -63,7 +63,7 @@ $('#box2').hover(function () {
 $('#box3').hover(function () {
     $(this).siblings().addClass('boxFaded');
     $('#slick3').slick('slickPlay');
-    document.getElementById('text3').innerHTML = "Slatkiši: mug cake, marshmallow-i, ";
+    document.getElementById('text3').innerHTML = "Slatkiši: mug cake, marshmallow-i, torte, kolači, sladoledi ...";
     document.getElementById('text3').style.color = "rgb(243, 34, 69)";
 }, function () {
     $(this).siblings().removeClass('boxFaded');

@@ -88,7 +88,6 @@ h2{
 }
 
 .galerija{
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -97,7 +96,7 @@ h2{
 }
 
 .galerija img{
-    margin: 20px;
+    padding: 20px;
     width: 200px;
     height: 200px;
 }
@@ -116,7 +115,7 @@ h3 {
 }
 .info p{
     margin: 2% auto;
-    font-size: 1.5vw;
+    font-size: 20px;
 }
 .drustMreze {
     max-width: 45px;

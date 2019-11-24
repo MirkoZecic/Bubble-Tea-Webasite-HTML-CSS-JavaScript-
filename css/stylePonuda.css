@@ -184,4 +184,10 @@ hr {
     .dropbtn {
         font-size: 10.8pt;
     }
+    .textBox{
+        width: 65%;
+    }
+    .slick{
+        width: 35%;
+    }
 }
