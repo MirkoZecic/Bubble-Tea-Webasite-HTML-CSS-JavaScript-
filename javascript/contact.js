@@ -67,6 +67,8 @@ function validateForm() {
     let msg = document.querySelector("#msg");
     let responseAlert = "email";
 
+    var datum=new Date;
+
     if (!validateInputBox(name.value)) {
         alert("Niste uneli ime!");
         name.focus();
@@ -103,9 +105,9 @@ function validateForm() {
     }
 
     if (responseAlert == "email")
-        alert("Poruka uspesno poslata\n\nIme: " + name.value + "\nE-mail: " + email.value + "\nPoruka:" + msg.value);
+        alert("Poruka uspesno poslata\n\nIme: " + name.value + "\nE-mail: " + email.value + "\nPoruka: " + msg.value+"\nDatum: "+datum.getDate()+"."+(datum.getMonth()+1)+"."+datum.getFullYear()+".");
     else
-        alert("Poruka uspesno poslata\n\nIme: " + name.value + "\nTelefon: " + phone.value + "\nPoruka:" + msg.value);
+        alert("Poruka uspesno poslata\n\nIme: " + name.value + "\nTelefon: " + phone.value + "\nPoruka: " + msg.value+"\Datum: "+datum.getDate()+"."+(datum.getMonth()+1)+"."+datum.getFullYear()+".");
 
     return true;
 }

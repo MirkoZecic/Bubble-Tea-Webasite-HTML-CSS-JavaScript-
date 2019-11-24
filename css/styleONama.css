@@ -83,6 +83,25 @@ body {
     z-index: 1;
 }
 
+h2{
+    text-align: center;
+}
+
+.galerija{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    border-radius: 15%;
+}
+
+.galerija img{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+}
+
 h3 {
     text-align: center;
     font-size: 25px;
@@ -90,19 +109,15 @@ h3 {
 }
 
 .info {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    background-image: url(../images/oNamaBg.png);
+    background-size: cover;
     font-size: large;
     padding: 7% 14%;
 }
-
-.contactImg {
-    align-items: flex-start;
-    max-width: 125px;
-    max-height: 150px;
-    opacity: 0.7;
+.info p{
+    margin: 2% auto;
+    font-size: 1.5vw;
 }
-
 .drustMreze {
     max-width: 45px;
     height: auto;
@@ -132,8 +147,6 @@ hr {
     .info {
         padding: 7% 2%;
         justify-items: center;
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
     }
     .info p {
         order: 1;

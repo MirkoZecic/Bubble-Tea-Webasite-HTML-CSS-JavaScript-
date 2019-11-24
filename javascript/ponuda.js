@@ -38,29 +38,38 @@ $(document).ready(function () {
 $('#box1').hover(function () {
     $(this).siblings().addClass('boxFaded');
     $('#slick1').slick('slickPlay');
-    document.getElementById('text1').innerHTML = "Ovde stoji text novi kad se predje misem preko prvog diva";
+    document.getElementById('text1').innerHTML = "Ukusi: malina, jagoda, kivi, mango, grožđe, liči, narandža ...";
+    document.getElementById('text1').style.color = "rgb(243, 34, 69)";
+
 }, function () {
     $(this).siblings().removeClass('boxFaded');
     $('#slick1').slick('slickPause');
-    document.getElementById('text1').innerHTML = "Ovde stoji text kad se pomeri mis sa diva (prvi)";
+    document.getElementById('text1').innerHTML = "Najčešće se misli na hladne osvežavajuće čajeve sa ukusima voća sa bobama i želeom.";
+    document.getElementById('text1').style.color = "black";
 });
 
 $('#box2').hover(function () {
     $(this).siblings().addClass('boxFaded');
     $('#slick2').slick('slickPlay');
-    document.getElementById('text2').innerHTML = "Ovde stoji text novi kad se predje misem preko drugog diva";
+    document.getElementById('text2').innerHTML = "Ukusi: kokos, plazma, kesten, bambus ...";
+    document.getElementById('text2').style.color = "rgb(243, 34, 69)";
 }, function () {
     $(this).siblings().removeClass('boxFaded');
     $('#slick2').slick('slickPause');
-    document.getElementById('text2').innerHTML = "Ovde stoji text kad se pomeri mis sa diva (drugi)";
+    document.getElementById('text2').innerHTML = "Možete se odlučiti i za toplu mlečnu varijantu , savršenu za hladne i zimske dane.";
+    document.getElementById('text2').style.color = "black";
 });
 
 $('#box3').hover(function () {
     $(this).siblings().addClass('boxFaded');
     $('#slick3').slick('slickPlay');
+    document.getElementById('text3').innerHTML = "Slatkiši: mug cake, marshmallow-i, ";
+    document.getElementById('text3').style.color = "rgb(243, 34, 69)";
 }, function () {
     $(this).siblings().removeClass('boxFaded');
     $('#slick3').slick('slickPause');
+    document.getElementById('text3').innerHTML = "Za neizlečive sladokusce napravili smo neodoljivu ponudu - izmešali smotradiocionalnp sa klasičnim ukusima, omiljeno iz detinstva sa istočnjačkim.";
+    document.getElementById('text3').style.color = "black";
 });
 
 
