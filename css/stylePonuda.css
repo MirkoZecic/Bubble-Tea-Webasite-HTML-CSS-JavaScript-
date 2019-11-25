@@ -86,12 +86,12 @@ body {
     cursor: pointer;
 }
 
-.textBox{
+.textBox {
     text-align: center;
     width: 70%;
 }
 
-.textBox h3{
+.textBox h3 {
     margin: 10% auto;
 }
 
@@ -169,6 +169,9 @@ hr {
     .box {
         margin: 2% 7%;
     }
+    .textBox p {
+        font-size: 15px
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -184,10 +187,13 @@ hr {
     .dropbtn {
         font-size: 10.8pt;
     }
-    .textBox{
+    .textBox {
         width: 65%;
     }
-    .slick{
+    .slick {
         width: 35%;
+    }
+    .textBox p {
+        font-size: 12px;
     }
 }
