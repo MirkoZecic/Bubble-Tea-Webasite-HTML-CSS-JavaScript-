@@ -89,10 +89,10 @@ body {
 }
 
 #map {
-    width: 40%;
+    width: 45%;
     height: 400px;
     background-color: grey;
-    padding: 0 5%;
+    margin-left: auto;
 }
 
 .forma {
